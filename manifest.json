@@ -1,52 +1,25 @@
 {
-  "name": "HealthWatch - Personal Health Tracking App",
+  "name": "HealthWatch",
   "short_name": "HealthWatch",
-  "description": "Track your personal health metrics, symptoms, and wellness journey. Stay aware of your body's signals with daily check-ins, deficiency insights, and health analytics.",
-  "start_url": "/Health-watch-/",
-  "scope": "/Health-watch-/",
+  "description": "A gentle, private, daily health tracker",
+  "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
-  "orientation": "portrait-or-landscape",
+  "orientation": "portrait",
+  "background_color": "#fdf6ee",
   "theme_color": "#7ab89a",
-  "background_color": "#ffffff",
-  "categories": ["health", "medical", "productivity"],
   "icons": [
     {
-      "src": "icon-192x192.png",
+      "src": "icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any"
+      "purpose": "any maskable"
     },
     {
-      "src": "icon-512x512.png",
+      "src": "icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "icon-maskable-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "icon-maskable-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
-    }
-  ],
-  "screenshots": [
-    {
-      "src": "screenshot-1.png",
-      "type": "image/png",
-      "sizes": "540x720",
-      "form_factor": "narrow"
-    },
-    {
-      "src": "screenshot-2.png",
-      "type": "image/png",
-      "sizes": "1280x720",
-      "form_factor": "wide"
+      "purpose": "any maskable"
     }
   ]
 }

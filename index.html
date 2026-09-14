@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <meta name="theme-color" content="#7ab89a">
 <title>HealthWatch</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="HealthWatch">
+<meta name="mobile-web-app-capable" content="yes">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--cream:#fdf6ee;--sage:#7ab89a;--sage-light:#e8f5ee;--peach:#f4845f;--peach-light:#fdeee8;--gold:#e8b84b;--gold-light:#fdf3dc;--rose:#e8788a;--rose-light:#fdeef1;--lavender:#a89bc8;--lavender-light:#f0edf8;--sky:#6db8d4;--sky-light:#e8f6fb;--red:#e05252;--red-light:#fdeaea;--text-dark:#3a2f2f;--text-mid:#7a6a60;--text-soft:#b0a090;--border:rgba(180,150,120,0.15);--shadow:rgba(180,130,90,0.10);}
@@ -1471,6 +1478,18 @@ function downloadData(){
   }catch(e){
     alert('Download failed. Please try again.');
   }
+}
+
+// ══════════════════════════════════════════
+// PWA — SERVICE WORKER REGISTRATION
+// Enables "Add to Home Screen" install prompts and offline access.
+// Safe no-op on browsers/contexts that don't support it (e.g. very old
+// browsers) — the app still works normally, just without the PWA extras.
+// ══════════════════════════════════════════
+if('serviceWorker' in navigator){
+  window.addEventListener('load',()=>{
+    navigator.serviceWorker.register('sw.js').catch(()=>{});
+  });
 }
 </script>
 </body>
